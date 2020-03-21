@@ -3,9 +3,11 @@ const express = require('express');
 const hbs = require('hbs');
 const forecast = require('./utils/forecast');
 const geocode = require('./utils/geocode');
-const PORT = 3000;
 
 const app = express();
+
+const PORT = process.env.PORT || 3000;
+
 const publicDirectoryPath = path.join(__dirname,'../public');
 const viewsPath = path.join(__dirname, '../templates/views');
 const partialPath = path.join(__dirname,'../templates/partials')
